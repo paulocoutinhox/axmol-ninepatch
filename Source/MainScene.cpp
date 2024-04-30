@@ -1,4 +1,6 @@
 #include "MainScene.h"
+#include "ui/UIButton.h"
+#include "ui/UIScale9Sprite.h"
 
 USING_NS_AX;
 
@@ -26,6 +28,14 @@ bool MainScene::init()
     dialog = WinDialogWindow::create();
     dialog->retain();
     dialog->show();
+    
+    // button
+    ax::ui::Button *button = ax::ui::Button::create("ui/button.9.png");
+    button->setScale9Enabled(true);
+    button->setContentSize(Vec2(400, 240));
+    button->setPosition(Vec2(visibleSize.width / 2, visibleSize.height * 0.85));
+    button->retain();
+    addChild(button);
     
     scheduleUpdate();
 

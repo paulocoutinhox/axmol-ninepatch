@@ -10,6 +10,14 @@ glView->setDesignResolutionSize(frameSize.width, frameSize.height, ResolutionPol
 
 But when i set `setContentScaleFactor` nine patch images break.
 
+The problem appear be only in FairyGUI.
+
 ## Screenshot
 
+Only FairyGUI:
+
 ![Extras/images/ss.jpg](Extras/images/ss.jpg)
+
+AXMOL Normal Button and FairyGUI:
+
+![Extras/images/ss.jpg](Extras/images/ss2.jpg)
