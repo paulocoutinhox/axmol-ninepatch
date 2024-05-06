@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="720,1280">
+<component size="720,1280" opaque="false">
   <displayList>
     <image id="n3_g1wp" name="n3" src="g1wp3" fileName="images/Dialog.png" xy="80,240" size="560,800">
       <relation target="" sidePair="width-width,height-height"/>
