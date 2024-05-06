@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="720,1280">
+  <displayList>
+    <image id="n3_g1wp" name="n3" src="g1wp3" fileName="images/Dialog.png" xy="80,240" size="560,800">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n1_h5jg" name="n1" xy="84,240" size="551,149" fontSize="80" color="#ffffcc" align="center" vAlign="middle" autoSize="none" strokeColor="#663300" strokeSize="5" text="Demo">
+      <relation target="n3_g1wp" sidePair="width-width,height-height,center-center"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n11_e2zz" name="n11" src="e2zzw" fileName="BtDemo1.xml" xy="171,443" size="378,79">
+      <Button title="Test 1" titleColor="#000000" titleFontSize="30"/>
+    </component>
+  </displayList>
+</component>

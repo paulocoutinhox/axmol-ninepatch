@@ -40,6 +40,7 @@ public:
     ~AppDelegate() override;
 
     void initGLContextAttrs() override;
+    void setDesignResolution();
 
     /**
     @brief    Implement Director and Scene init code here.

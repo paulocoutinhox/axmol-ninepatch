@@ -3,11 +3,11 @@
 #include "axmol.h"
 #include "FairyGUI.h"
 
-class WinDialogWindow : public fairygui::Window
+class DemoDialogWindow : public fairygui::Window
 {
 public:
     public:
-    CREATE_FUNC(WinDialogWindow);
+    CREATE_FUNC(DemoDialogWindow);
 
 protected:
     virtual void onInit() override;

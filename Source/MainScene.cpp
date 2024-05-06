@@ -17,18 +17,18 @@ bool MainScene::init()
     auto safeArea = _director->getSafeAreaRect();
     auto safeOrigin = safeArea.origin;
 
-    // win dialog
+    // demo dialog
     fairygui::UIConfig::registerFont("Poppins-SemiBold", "fonts/Poppins-SemiBold.ttf");
 
     groot = fairygui::GRoot::create(this);
     groot->retain();
 
-    fairygui::UIPackage::addPackage("ui/dialog/dialog");
+    fairygui::UIPackage::addPackage("ui/fairy-gui/Main");
 
-    dialog = WinDialogWindow::create();
+    dialog = DemoDialogWindow::create();
     dialog->retain();
     dialog->show();
-    
+
     // button
     ax::ui::Button *button = ax::ui::Button::create("ui/button.9.png");
     button->setScale9Enabled(true);
@@ -36,7 +36,7 @@ bool MainScene::init()
     button->setPosition(Vec2(visibleSize.width / 2, visibleSize.height * 0.85));
     button->retain();
     addChild(button);
-    
+
     scheduleUpdate();
 
     return true;

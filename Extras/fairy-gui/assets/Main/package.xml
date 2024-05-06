@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ko9otz9c">
+  <resources>
+    <component id="gtsr0" name="DemoDialog.xml" path="/" exported="true"/>
+    <image id="g1wp3" name="Dialog.png" path="/images/"/>
+    <image id="pupaa" name="DialogButton.png" path="/images/" scale="9grid" scale9grid="35,35,67,47"/>
+    <component id="e2zzw" name="BtDemo1.xml" path="/"/>
+  </resources>
+  <publish name="" path="/Users/paulo/Developer/workspaces/cpp/ninepatch/Content/ui/fairy-gui" packageCount="2" codePath="/Users/paulo/Developer/workspaces/cpp/biblemania/Source/ui/fairy-gui"/>
+</packageDescription>
