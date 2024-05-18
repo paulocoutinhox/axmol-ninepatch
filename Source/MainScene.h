@@ -14,6 +14,7 @@ public:
 private:
     fairygui::GRoot* groot;
     DemoDialogWindow* dialog;
+    std::string anim = "idle";
 };
 
 #endif  // __MAIN_SCENE_H__
