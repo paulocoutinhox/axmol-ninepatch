@@ -86,6 +86,14 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(spine)
 
+if(AX_ENABLE_EXT_COCOSTUDIO AND NOT BUILD_SHARED_LIBS)
+    target_include_directories(cocostudio
+        PUBLIC ${CMAKE_CURRENT_LIST_DIR}/spine/runtime/include
+        PUBLIC ${CMAKE_CURRENT_LIST_DIR}/spine/src
+        PUBLIC ${_AX_ROOT}/extensions/Particle3D/src
+    )
+endif()
+
 # The common cross-platforms source files and header files
 file(GLOB_RECURSE GAME_HEADER
     Source/*.h Source/*.hpp
@@ -96,7 +104,6 @@ file(GLOB_RECURSE GAME_SOURCE
 
 set(GAME_INC_DIRS
   "${CMAKE_CURRENT_SOURCE_DIR}/Source"
-  "${CMAKE_CURRENT_SOURCE_DIR}/spine/runtime/include"
 )
 
 set(content_folder
@@ -225,7 +232,7 @@ if(APPLE)
     endif()
 
     # For code-signing, set the DEVELOPMENT_TEAM:
-    #set_xcode_property(${APP_NAME} DEVELOPMENT_TEAM "GRLXXXX2K9")
+    set_xcode_property(${APP_NAME} DEVELOPMENT_TEAM "99AHAA343Q")
 elseif(WINDOWS)
     if(NOT _AX_USE_PREBUILT)
         ax_sync_target_dlls(${APP_NAME})

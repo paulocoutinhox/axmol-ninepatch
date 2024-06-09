@@ -35,8 +35,10 @@ bool MainScene::init()
 
     getPhysicsWorld()->setGravity(Vec2(0, -980));
 
-    const char* atlasPath = "spine/Pirate.atlas";
-    const char* skelPath  = "spine/Pirate.json";
+//    const char* atlasPath = "spine/Pirate.atlas";
+//    const char* skelPath  = "spine/Pirate.json";
+    const char* atlasPath = "spine/goblins.atlas";
+    const char* skelPath  = "spine/goblins-pro.json";
 
     // Carregar atlas
     //    spAtlas* atlas = spAtlas_createFromFile(atlasPath, 0);
@@ -59,9 +61,10 @@ bool MainScene::init()
     //
     // Criar SkeletonAnimation
     SkeletonAnimation* skeletonNode = SkeletonAnimation::createWithJsonFile(skelPath, atlasPath);
-    skeletonNode->setAnimation(0, "Idle", true);
+    skeletonNode->setAnimation(0, "walk", true);
     skeletonNode->setPosition(Vec2(400, 300));  // Defina a posição conforme necessário
-    skeletonNode->setScale(0.4f);
+    skeletonNode->setScale(1.5f);
+    skeletonNode->setSkin("goblin");
     addChild(skeletonNode);
 
     auto body = PhysicsBody::createBox(Size(50, 100));  // Ajuste o tamanho conforme necessário
