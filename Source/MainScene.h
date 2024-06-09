@@ -5,12 +5,12 @@
 #include "FairyGUI.h"
 #include "DemoDialogWindow.h"
 
-
 class MainScene : public ax::Scene
 {
 public:
     bool init() override;
     void update(float delta) override;
+
 private:
     fairygui::GRoot* groot;
     DemoDialogWindow* dialog;

@@ -29,6 +29,9 @@ set(APP_NAME ninepatch)
 
 project(${APP_NAME})
 
+# Extensions
+set(AX_ENABLE_EXT_SPINE OFF CACHE BOOL "Build extension spine" FORCE)
+
 if(XCODE)
     set(CMAKE_XCODE_GENERATE_TOP_LEVEL_PROJECT_ONLY TRUE)
 endif()
@@ -70,6 +73,19 @@ if (NOT _AX_USE_PREBUILT)
     add_subdirectory(${_AX_ROOT}/core ${ENGINE_BINARY_PATH}/axmol/core)
 endif()
 
+# Extensions
+include(FetchContent)
+
+FetchContent_Declare(
+    spine
+    GIT_REPOSITORY https://github.com/axmolengine/spine-axmol.git
+    GIT_TAG spine42
+    GIT_SHALLOW ON
+    SOURCE_DIR "${CMAKE_CURRENT_LIST_DIR}/spine"
+)
+
+FetchContent_MakeAvailable(spine)
+
 # The common cross-platforms source files and header files
 file(GLOB_RECURSE GAME_HEADER
     Source/*.h Source/*.hpp
@@ -85,6 +101,9 @@ set(GAME_INC_DIRS
 set(content_folder
     "${CMAKE_CURRENT_SOURCE_DIR}/Content"
     )
+
+# Extensions
+list(APPEND GAME_INC_DIRS "${CMAKE_CURRENT_LIST_DIR}/spine/runtime/include")
 
 if(APPLE)
     ax_mark_multi_resources(common_content_files RES_TO "Resources" FOLDERS ${content_folder})

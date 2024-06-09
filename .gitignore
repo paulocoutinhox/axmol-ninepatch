@@ -45,3 +45,5 @@ build_*/
 *.egg-info
 .pytest_cache
 poetry.lock
+
+/spine

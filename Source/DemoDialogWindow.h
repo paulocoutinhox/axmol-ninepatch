@@ -6,7 +6,7 @@
 class DemoDialogWindow : public fairygui::Window
 {
 public:
-    public:
+public:
     CREATE_FUNC(DemoDialogWindow);
 
 protected:
