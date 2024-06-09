@@ -96,6 +96,7 @@ file(GLOB_RECURSE GAME_SOURCE
 
 set(GAME_INC_DIRS
   "${CMAKE_CURRENT_SOURCE_DIR}/Source"
+  "${CMAKE_CURRENT_SOURCE_DIR}/spine/runtime/include"
 )
 
 set(content_folder
@@ -103,8 +104,6 @@ set(content_folder
     )
 
 # Extensions
-list(APPEND GAME_INC_DIRS "${CMAKE_CURRENT_LIST_DIR}/spine/runtime/include")
-
 if(APPLE)
     ax_mark_multi_resources(common_content_files RES_TO "Resources" FOLDERS ${content_folder})
 elseif(WINDOWS)
